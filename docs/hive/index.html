@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Hive - My Reference</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Hive";
+    var mkdocs_page_input_path = "hive.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> My Reference</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">CheatSheets</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../vscode_cheatsheet/">VS Code</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../linux_cheatsheet/">Linux</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../jupyter_cheatsheet/">Jupyter</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Python</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../python-installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../python-editor/">Editor</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mysql/">Mysql</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sqlalchemy/">Sqlalchemy</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../markdown/">Markdown</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../docker/">Docker</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Hive</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#install">Install</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">My Reference</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Hive</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="install">Install</h1>
+<ul>
+<li>In ubuntu, first install SASL</li>
+</ul>
+<pre><code>sudo apt-get install libsasl2-dev
+</code></pre>
+
+<ul>
+<li>Install hive related python packages</li>
+</ul>
+<pre><code>pip install sasl
+pip install thrift
+pip install thrift-sasl
+pip install PyHive
+</code></pre>
+
+<ul>
+<li>Connect with hive</li>
+</ul>
+<pre><code>from pyhive import hive
+conn = hive.Connection(host=&quot;YOUR_HIVE_HOST&quot;, port=PORT, username=&quot;YOU&quot;)
+</code></pre>
+
+<ul>
+<li>Direct connection</li>
+</ul>
+<pre><code>cursor = conn.cursor()
+cursor.execute(&quot;SELECT cool_stuff FROM hive_table&quot;)
+for result in cursor.fetchall():
+  use_result(result)
+</code></pre>
+
+<ul>
+<li>Use with Pandas</li>
+</ul>
+<pre><code>import pandas as pd
+df = pd.read_sql(&quot;SELECT cool_stuff FROM hive_table&quot;, conn)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../docker/" class="btn btn-neutral" title="Docker"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../docker/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
