@@ -34,6 +34,7 @@ python3.6 -m venv py_works --without-pip
 cd py_works
 source bin/activate
 curl https://bootstrap.pypa.io/get-pip.py | python3
+sudo apt-get install python3.6-venv
 ```
 Now you will have both Python 3.6 and Pip 3.6 installed.
 
