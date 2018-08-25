@@ -1,4 +1,0 @@
-
-# Virtual Environment
-## venv
-## Virtualenv
