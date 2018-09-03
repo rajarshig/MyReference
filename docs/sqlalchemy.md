@@ -35,6 +35,10 @@ tablename = metadata.tables['tablename']
 ```
 interval_query = select([tablename]).order_by('id').limit(12)
 interval_data = connection.execute`(interval_query)
+- Select LIKE query
+```
+q = select([tablename]).where(tablename.c.colname.like('%' + var_name + '%'))
+```
 
 first = interval_data.fetchone()
 ````
