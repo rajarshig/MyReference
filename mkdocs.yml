@@ -13,5 +13,8 @@ pages:
     - Markdown: markdown.md
     - Docker: docker.md
     - Hive: hive.md
+    - Nginx: nginx.md
+    - Utility:
+      - Screen: linux_screen.md
 
 theme: readthedocs
