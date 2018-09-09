@@ -11,3 +11,8 @@ sudo apt update gcc
 sudo apt-get install libssl-dev
 sudo apt-get install libmysqlclient-dev
 ```
+
+## Mysqldump
+```
+mysqldump --single-transaction -u username -p dbname tablename --where "updated_at < '2018-07-01 00:00:00'">backup_filename.sql
+```

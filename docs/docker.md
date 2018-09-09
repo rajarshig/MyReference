@@ -79,4 +79,28 @@ For more examples and ideas, visit:
 https://docs.docker.com/engine/userguide/
  
 ```
+## Commands
+- List running containers
+```
+docker container ls
+```
+
+## Pull docker images
+- sudo docker login
+- add your user to docker group 
+```
+usermod -aG docker $USER
+```
+- 
+```
+sudo docker pull logicalspark/docker-tikaserver
+```
+- Run
+```
+docker run -d -p 9998:9998 logicalspark/docker-tikaserver
+```
+- Check with 
+```
+docker container ls
+```
 
