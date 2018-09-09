@@ -14,7 +14,7 @@ screen -d res_gid
 ```
 - Re attach
 ```
-screen -d [name]
+screen -d -r [ID]
 ```
 - List all running Screen
 ```
