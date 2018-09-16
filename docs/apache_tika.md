@@ -4,6 +4,36 @@
 [https://github.com/chrismattmann/tika-python]
 [https://wiki.apache.org/tika/TikaJAXRS]
 
+## REST Server
+[https://wiki.apache.org/tika/TikaJAXRS](https://wiki.apache.org/tika/TikaJAXRS)
+git clone https://github.com/apache/tika.git tika-trunk
+cd ./tika-trunk/
+
+Installing the Oracle JDK
+
+If you want to install the Oracle JDK, which is the official version distributed by Oracle, you will need to follow a few more steps.
+
+First, add Oracle's PPA, then update your package repository.
+
+    sudo add-apt-repository ppa:webupd8team/java
+    sudo apt-get update
+
+sudo apt-get install oracle-java8-installer
+https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04
+
+apt-get install maven
+
+mvn install
+(install issues:)
+mvn clean install -U
+mvn dependency::tree
+https://stackoverflow.com/questions/13170860/failed-to-execute-goal-org-apache-maven-pluginsmaven-surefire-plugin2-10test
+
+- Run
+cd ./tika-server/target/
+java -jar tika-server-1.8-SNAPSHOT.jar
+
+
 ## 
 [https://tika.apache.org/1.10/gettingstarted.html](https://tika.apache.org/1.10/gettingstarted.html)
 ## Tika REST Server docker image
