@@ -5,6 +5,9 @@
 scp username@hostip:/filepath/filename ~/
 ```
 
+# Counting files & directories
+[https://www.theurbanpenguin.com/counting-files-directories-linux/](https://www.theurbanpenguin.com/counting-files-directories-linux/)
+
 # Aliases
 
 - Add aliases in .bash_aliases file
@@ -18,4 +21,12 @@ alias gtst="git status"
 - Activate 
 ```
 source ~/.bash_aliases
+```
+
+# SSH key
+- For issue 'sign_and_send_pubkey: signing failed: agent refused operation'
+[https://askubuntu.com/questions/762541/ubuntu-16-04-ssh-sign-and-send-pubkey-signing-failed-agent-refused-operation](https://askubuntu.com/questions/762541/ubuntu-16-04-ssh-sign-and-send-pubkey-signing-failed-agent-refused-operation)
+```
+eval `ssh-agent -s`
+ssh-add
 ```

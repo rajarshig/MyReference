@@ -84,6 +84,25 @@ https://docs.docker.com/engine/userguide/
 ```
 docker container ls
 ```
+- Stop container 
+[https://docs.docker.com/engine/reference/commandline/stop/](https://docs.docker.com/engine/reference/commandline/stop/)
+```
+docker stop [container id]
+```
+- Check exited containers
+```
+docker ps -aq -f status=exited
+```
+- Remove
+[https://docs.docker.com/engine/reference/commandline/rm/#remove-a-container-and-selectively-remove-volumes](https://docs.docker.com/engine/reference/commandline/rm/#remove-a-container-and-selectively-remove-volumes)
+Remove all exited containers
+```
+docker rm $(docker ps -a -q)
+```
+- Start docker
+```
+docker-compose up -d
+```
 
 ## Pull docker images
 - sudo docker login
@@ -103,4 +122,19 @@ docker run -d -p 9998:9998 logicalspark/docker-tikaserver
 ```
 docker container ls
 ```
+
+## Create docker image
+- Install docker compose
+```
+sudo apt-get install docker-compose
+```
+- Create a folder where you want to place the project & create docker-compose.yml file in there
+- 
+
+
+https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach?noredirect=1&lq=1
+https://stackoverflow.com/questions/44543842/how-to-connect-locally-hosted-mysql-databse-with-the-docker-container
+https://github.com/nezhar/wordpress-docker-compose/blob/master/docker-compose.yml
+https://themeisle.com/blog/local-wordpress-development-using-docker/
+https://docs.docker.com/compose/wordpress/#define-the-project
 
