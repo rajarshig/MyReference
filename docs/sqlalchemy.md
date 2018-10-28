@@ -39,6 +39,10 @@ interval_data = connection.execute`(interval_query)
 ```
 q = select([tablename]).where(tablename.c.colname.like('%' + var_name + '%'))
 ```
+- Select IN query
+```
+q = select([tablename]).where(tablename.c.colname.in_(['', '']))
+```
 
 first = interval_data.fetchone()
 ````
