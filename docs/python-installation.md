@@ -30,6 +30,7 @@ Ubuntu 16.04 defaults to python 3.5. To update default python to 3.6, use follow
 sudo add-apt-repository ppa:jonathonf/python-3.6
 sudo apt-get update
 sudo apt-get install python3.6
+sudo apt-get install python3.6-dev
 python3.6 -m venv py_works --without-pip
 cd py_works
 source bin/activate
