@@ -30,6 +30,7 @@ source ~/.bash_aliases
 eval `ssh-agent -s`
 ssh-add
 ```
+
 # Ubuntu
 ## View installed package with grep query
 ```
@@ -39,3 +40,4 @@ dpkg -l | grep postgres
 ```
 sudo apt-get --purge remove postgresql
 ```
+

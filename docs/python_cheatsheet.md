@@ -1,6 +1,7 @@
 # Get filename & extension
 ```
 name, ext = os.path.splitext('file.txt')
+
 ```
 
 ## numpy value to json custom encoder
@@ -24,4 +25,5 @@ You use it like this:
 json.dumps(numpy.float32(1.2), cls=MyEncoder)
 json.dumps(numpy.arange(12), cls=MyEncoder)
 json.dumps({'a': numpy.int32(42)}, cls=MyEncoder)
+
 ```
