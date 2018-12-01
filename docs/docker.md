@@ -129,12 +129,7 @@ docker container ls
 sudo apt-get install docker-compose
 ```
 - Create a folder where you want to place the project & create docker-compose.yml file in there
-- 
 
 
-https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach?noredirect=1&lq=1
-https://stackoverflow.com/questions/44543842/how-to-connect-locally-hosted-mysql-databse-with-the-docker-container
-https://github.com/nezhar/wordpress-docker-compose/blob/master/docker-compose.yml
-https://themeisle.com/blog/local-wordpress-development-using-docker/
-https://docs.docker.com/compose/wordpress/#define-the-project
+
 
