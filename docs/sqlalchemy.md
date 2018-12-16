@@ -46,6 +46,11 @@ q = select([tablename]).where(tablename.c.colname.in_(['', '']))
 
 first = interval_data.fetchone()
 ````
+- Select query with AND condition
+```
+query = select([tablename]).where(and_(tablename.c.colname1 == [:value], tablename.c.colname2 == [:value]))
+    
+```
 - Insert query
 ```
 time_entry = {'interval_time': interval_time}

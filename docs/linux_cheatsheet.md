@@ -1,3 +1,35 @@
+# Add user
+
+# Change root password
+
+- Type the following command to become root user and issue passwd:
+```
+sudo -i
+passwd
+```
+- OR set a password for root user in a single go:
+```
+sudo passwd root
+```
+- Test it your root password by typing the following command:
+```
+su -
+```
+- Reference
+[https://www.cyberciti.biz/faq/change-root-password-ubuntu-linux/](https://www.cyberciti.biz/faq/change-root-password-ubuntu-linux/)
+
+# Create user with sudo
+- Create user
+```
+adduser username
+```
+- Give sudo permisson to new user
+```
+usermod -aG sudo username
+```
+- Reference
+[https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart)
+
 # SCP
 
 - Server to local system
