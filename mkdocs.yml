@@ -1,12 +1,14 @@
 site_name: My Reference
 pages:
     - Home: index.md
+    - General Reference: general.md
     - CheatSheets:
       - VS Code: vscode_cheatsheet.md
       - Linux: linux_cheatsheet.md
       - Jupyter: jupyter_cheatsheet.md
       - Git: git_cheatsheet.md
       - Python: python_cheatsheet.md
+      - Ubuntu: ubuntu_cheatsheet.md
     - Python:
       - Installation: python-installation.md
       - Virtual environment: python-virtual-environment.md
