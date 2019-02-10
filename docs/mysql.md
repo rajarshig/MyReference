@@ -41,3 +41,6 @@ FLUSH PRIVILEGES;
 ```
 mysqldump --single-transaction -u username -p dbname tablename --where "updated_at < '2018-07-01 00:00:00'">backup_filename.sql
 ```
+
+
+select Host,User,Password from mysql.user;
