@@ -71,3 +71,9 @@ dpkg -l | grep postgres
 ```
 sudo apt-get --purge remove postgresql
 ```
+
+## Check file & folder size
+```
+df -h
+du -sh [folder]
+```

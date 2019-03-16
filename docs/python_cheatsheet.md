@@ -1,6 +1,12 @@
-# Get filename & extension
+## Get filename & extension
 ```
 name, ext = os.path.splitext('file.txt')
+```
+
+## Get absolute path of a file
+```
+filepath = 'folder1/folder2/test.csv'
+absolute_file_path = os.path.join(os.path.dirname(os.path.realpath(__name__)), filepath)
 ```
 
 ## numpy value to json custom encoder

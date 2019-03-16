@@ -93,16 +93,31 @@ docker stop [container id]
 ```
 docker ps -aq -f status=exited
 ```
-- Remove
-[https://docs.docker.com/engine/reference/commandline/rm/#remove-a-container-and-selectively-remove-volumes](https://docs.docker.com/engine/reference/commandline/rm/#remove-a-container-and-selectively-remove-volumes)
-Remove all exited containers
-```
-docker rm $(docker ps -a -q)
-```
+
+
 - Start docker
 ```
 docker-compose up -d
 ```
+- Check version
+```
+docker version
+```
+- View docker images with size
+```
+docker images
+``` 
+- Remove images
+```
+docker rmi [image id]
+```
+
+## Push in dockerhub
+- 
+```
+docker tag project:latest newrepo:tagname
+```
+
 
 ## Pull docker images
 - sudo docker login
