@@ -21,3 +21,18 @@ git config --local credential.helper 'cache --timeout=518400'
 git config --local --unset credential.helper
 ```
 - Reference: [Git Credential Cache](https://git-scm.com/docs/git-credential-cache)
+
+## Remove files from Git
+- Removing a file added in the most recent unpushed commit
+Reference:
+[https://help.github.com/en/articles/removing-files-from-a-repositorys-history](https://help.github.com/en/articles/removing-files-from-a-repositorys-history)
+
+```
+git rm --cached giant_file
+git commit --amend -CHEAD
+git push
+```
+- Removing sensitive data from a repository
+[https://help.github.com/en/articles/removing-sensitive-data-from-a-repository](https://help.github.com/en/articles/removing-sensitive-data-from-a-repository)
+- Git rm documentation
+[https://git-scm.com/docs/git-rm](https://git-scm.com/docs/git-rm)

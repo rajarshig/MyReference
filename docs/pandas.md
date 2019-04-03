@@ -1,3 +1,7 @@
+## Merge, Join & Concat
+- [https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html](https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html)
+- [https://www.dataquest.io/blog/pandas-concatenation-tutorial/](https://www.dataquest.io/blog/pandas-concatenation-tutorial/)
+
 ## CSV to Mysql table
 ```
 import pandas as pd

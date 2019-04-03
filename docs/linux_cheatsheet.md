@@ -36,6 +36,10 @@ usermod -aG sudo username
 ```
 scp username@hostip:/filepath/filename ~/
 ```
+- Local to server
+```
+scp filename username@hostip:~
+```
 
 # Counting files & directories
 [https://www.theurbanpenguin.com/counting-files-directories-linux/](https://www.theurbanpenguin.com/counting-files-directories-linux/)
