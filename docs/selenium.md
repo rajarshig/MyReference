@@ -85,3 +85,12 @@ Example code to scroll down to bottom of page
 ```
 webdriver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
 ```
+- Switch between browser windows
+[https://www.techbeamers.com/switch-between-windows-selenium-python/](https://www.techbeamers.com/switch-between-windows-selenium-python/)
+```
+#get the window handle after a new window has opened
+window_after = driver.window_handles[1]
+
+#switch on to new child window
+driver.switch_to.window(window_after)
+```
