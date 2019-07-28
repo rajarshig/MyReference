@@ -74,9 +74,59 @@ COMMIT;
 ## Create table
 ```
 CREATE TABLE "jobs" ("id" serial NOT NULL PRIMARY KEY, "gmailid" varchar(1000) NULL, "req_jobid" varchar(1000) NULL, "job_title" varchar(1000) NULL, "city" varchar(1000) NULL, "zipcode" varchar(1000) NULL, "type_of_opening" varchar(1000) NULL, "client_contact_designation" varchar(1000) NULL, "degree" jsonb NULL, "primary_skills" jsonb NULL, "secondary_skills" jsonb NULL, "work_hours" varchar(1000) NULL, "client_contact_phone" varchar(1000) NULL, "client_contact_email" varchar(1000) NULL, "work_auth" varchar(1000) NULL, "overtime" varchar(1000) NULL, "travel_req" varchar(1000) NULL, "num_openings" varchar(100) NULL, "billing_rate" varchar(100) NULL, "domains" jsonb NULL, "tools" jsonb NULL, "work_ex" varchar(1000) NULL, "jd_skills" jsonb NULL, "jd_skills_vector" jsonb NULL, "jd_content" text NULL, "created_at" timestamp with time zone NOT NULL, "updated_at" timestamp with time zone NULL, "client_id" integer NULL, "email_id" integer NULL);
+```
+
+## Alter table
+```
 ALTER TABLE "jobs" ADD CONSTRAINT "jobs_client_id_d72bc1fd_fk_client_id" FOREIGN KEY ("client_id") REFERENCES "client" ("id") DEFERRABLE INITIALLY DEFERRED;
 ALTER TABLE "jobs" ADD CONSTRAINT "jobs_email_id_81a0d42b_fk_email_messages_id" FOREIGN KEY ("email_id") REFERENCES "email_messages" ("id") DEFERRABLE INITIALLY DEFERRED;
 CREATE INDEX "jobs_client_id_d72bc1fd" ON "jobs" ("client_id");
 CREATE INDEX "jobs_email_id_81a0d42b" ON "jobs" ("email_id");
 COMMIT;
+```
+
+
+## Command prompt
+- Get to Postgres prompt with user postgres
+```
+sudo -u postgres psql
+```
+- List databases
+```
+\l
+SELECT datname from pg_database;
+```
+- Select database
+```
+\c dbname
+```
+- Show connection information
+```
+\conninfo
+```
+- View all tables (this command shows all tables, as well as tables named like 'tbl_id_seq' that is of type sequence. This is a representation of serial type in the table(s), which have them. This keep track of the next number in the sequence and is created automatically for columns of this type.)
+```
+\t
+```
+- View all tables (without sequence types)
+```
+\dt
+```
+- Kill a query process
+```
+SELECT * FROM pg_stat_activity;
+SELECT 
+    pg_terminate_backend(pid) 
+FROM 
+    pg_stat_activity 
+WHERE 
+-- don't kill my own connection!
+pid <> pg_backend_pid()
+-- don't kill the connections to other databases
+AND datname = 'database_name'
+;
+```
+Before executing this query, you have to REVOKE the CONNECT privileges to avoid new connections:
+```
+REVOKE CONNECT ON DATABASE dbname FROM PUBLIC, username;
 ```
