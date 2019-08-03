@@ -43,6 +43,18 @@ q = select([tablename]).where(tablename.c.colname.like('%' + var_name + '%'))
 ```
 q = select([tablename]).where(tablename.c.colname.in_(['', '']))
 ```
+- SELECT NOT IN query
+```
+query = select([email_messages_tbl.c.id]).where(email_messages_tbl.c.email_sender.notin_(['id@gmail','id2@gmail.com']))
+```
+
+- First result
+```
+- Order by
+```
+select([tablename]).order_by("user_id", desc("num_addresses")))
+```
+- Group by
 
 first = interval_data.fetchone()
 ````

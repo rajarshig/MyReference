@@ -36,6 +36,10 @@ usermod -aG sudo username
 ```
 scp username@hostip:/filepath/filename ~/
 ```
+- Local to server
+```
+scp filename username@hostip:~
+```
 
 # Counting files & directories
 [https://www.theurbanpenguin.com/counting-files-directories-linux/](https://www.theurbanpenguin.com/counting-files-directories-linux/)
@@ -70,4 +74,10 @@ dpkg -l | grep postgres
 ## Remove installed package
 ```
 sudo apt-get --purge remove postgresql
+```
+
+## Check file & folder size
+```
+df -h
+du -sh [folder]
 ```
