@@ -4,33 +4,46 @@
 ## Install PostGreSQL 10
 ## Ubuntu 16.04
 - Uninstall if any previous version
-- Add the official postgres apt repository
+- Update & install
+```
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
 ```
 
-Ubuntu 14.04: sudo add-apt-repository 'deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main'
-Ubuntu 16.04: sudo add-apt-repository 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main'
-Ubuntu 17.04: sudo add-apt-repository 'deb http://apt.postgresql.org/pub/repos/apt/ zesty-pgdg main'
-```
-- Import the repository signing key, followed by an update to the package lists
-```
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
-  sudo apt-key add -
-sudo apt-get update
-```
-- Install 
-```
-sudo apt-get install postgres-10
-```
 - Ensure that the server is started by switching to the postgres user.
 ```
-sudo su - postgresql
+sudo -u postgres psql
 ```
- ## Python install
- ```
- pip install psycopg2-binary
- ```
+ 
+## Connect to a database
+```
+psql -d bses_pdm
+```
+## Check current database from PSQL prompt
+```
+\conninfo
+```
+## Create table like another table
+- With structure & data
+```
+CREATE TABLE target_table AS table source_table;
+```
+- With only structure
+```
+TABLE target_table AS table source_table with no data;
+```
+## Backup 
+- 
+```
+/usr/bin/pg_dump --file "/home/user/db_name.bak" --host "xxx.xxx.xx.xx" --port "5432" --username ":username" ":dbname" -v
+```
+- [https://www.digitalocean.com/community/tutorials/how-to-backup-postgresql-databases-on-an-ubuntu-vps](https://www.digitalocean.com/community/tutorials/how-to-backup-postgresql-databases-on-an-ubuntu-vps)
+## Python install
+```
+pip install psycopg2-binary
+```
 
- ## SQLAlchemy connection string
+## SQLAlchemy connection strin
 ```
 from sqlalchemy import create_engine
 engine = create_engine('postgresql://scott:tiger@localhost:5432/mydatabase')
@@ -113,12 +126,13 @@ SELECT datname from pg_database;
 \dt
 ```
 - Kill a query process
+Reference: [https://stackoverflow.com/questions/5108876/kill-a-postgresql-session-connection](https://stackoverflow.com/questions/5108876/kill-a-postgresql-session-connection)
 ```
 SELECT * FROM pg_stat_activity;
 SELECT 
-    pg_terminate_backend(pid) 
+pg_terminate_backend(pid) 
 FROM 
-    pg_stat_activity 
+pg_stat_activity 
 WHERE 
 -- don't kill my own connection!
 pid <> pg_backend_pid()

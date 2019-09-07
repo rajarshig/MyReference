@@ -1,6 +1,19 @@
+# About
+## Dockerfile
+The Dockerfile defines an application’s image content via one or more build commands that configure that image. Once built, you can run the image in a container. 
+Reference:
+[https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/)
+
+## Docker-Compose
+The docker-compose.yml file describes the services that make your app. In this example those services are a web server and database. The compose file also describes which Docker images these services use, how they link together, any volumes they might need mounted inside the containers. Finally, the docker-compose.yml file describes which ports these services expose. 
+
+
 # Install
 ## Install using the repository
 Before you install Docker CE for the first time on a new host machine, you need to set up the Docker repository. Afterward, you can install and update Docker from the repository.
+Reference:
+[https://docs.docker.com/compose/compose-file/](https://docs.docker.com/compose/compose-file/)
+
 
 ### Set up the repository
 - Update the apt package index:
@@ -80,6 +93,10 @@ https://docs.docker.com/engine/userguide/
  
 ```
 ## Commands
+- View info
+```
+docker info
+```
 - List running containers
 ```
 docker container ls
@@ -92,6 +109,11 @@ docker stop [container id]
 - Check exited containers
 ```
 docker ps -aq -f status=exited
+```
+
+- Remove container
+```
+docker container rm [container id]
 ```
 
 
@@ -112,11 +134,7 @@ docker images
 docker rmi [image id]
 ```
 
-## Push in dockerhub
-- 
-```
-docker tag project:latest newrepo:tagname
-```
+
 
 
 ## Pull docker images
@@ -135,7 +153,7 @@ docker run -d -p 9998:9998 logicalspark/docker-tikaserver
 ```
 - Check with 
 ```
-docker container ls
+docker container ls --all
 ```
 
 ## Create docker image
@@ -143,8 +161,35 @@ docker container ls
 ```
 sudo apt-get install docker-compose
 ```
-- Create a folder where you want to place the project & create docker-compose.yml file in there
-
+- Create a folder where you want to place the project & create Dockerfile file in there
+- Sample Dockerfile
+- Build image (Django sample)
+```
+FROM python:3.6.7-alpine
+ENV PYTHONUNBUFFERED 1
+RUN apk update
+# for numpy etc related dependencies
+RUN apk add make automake gcc g++ subversion python3-dev
+# for postgres dependency 
+RUN apk add postgresql-dev gcc python3-dev musl-dev
+RUN pip install psycopg2
+RUN mkdir /code
+WORKDIR /code
+ADD requirements.txt /code/
+RUN pip install -r requirements.txt
+ADD ./ /code/
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+```
+- Build an image from Dockerfile
+[https://docs.docker.com/engine/reference/commandline/build/](https://docs.docker.com/engine/reference/commandline/build/)
+```
+docker build -t [proj-tagname] .
+```
+- Run Container from docker image. Docker runs processes in isolated containers. A container is a process which runs on a host. The host may be local or remote. When an operator executes docker run, the container process that runs is isolated in that it has its own file system, its own networking, and its own isolated process tree separate from the host.
+[https://docs.docker.com/engine/reference/run/](https://docs.docker.com/engine/reference/run/)
+```
+run -p 8000:8000 --name apai_portal [imagename]
+```
 
 
 
