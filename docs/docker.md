@@ -108,7 +108,8 @@ docker stop [container id]
 ```
 - Check exited containers
 ```
-docker ps -aq -f status=exited
+docker ps -aq -f status=exited # show only ids
+docker ps -f status=exited
 ```
 
 - Remove container
@@ -189,6 +190,21 @@ docker build -t [proj-tagname] .
 [https://docs.docker.com/engine/reference/run/](https://docs.docker.com/engine/reference/run/)
 ```
 run -p 8000:8000 --name apai_portal [imagename]
+```
+
+## Use AWS ECR(Elastic Container Registry)
+- Create repository in AWS ECR, then follow instruction like below
+-
+```
+$(aws ecr get-login --no-include-email --region us-west-2)
+```
+- 
+```
+docker tag apai_portal:latest 032809623502.dkr.ecr.us-west-2.amazonaws.com/apai_portal:latest
+```
+-
+```
+docker push 032809623502.dkr.ecr.us-west-2.amazonaws.com/apai_portal:latest
 ```
 
 
