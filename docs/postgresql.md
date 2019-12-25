@@ -23,6 +23,13 @@ psql -d bses_pdm
 ```
 \conninfo
 ```
+## Change password
+-
+```
+psql -U postgres
+postgres=# alter user postgres with password 'NEW_PASSWORD';
+postgresl=# \q
+```
 ## Create table like another table
 - With structure & data
 ```
