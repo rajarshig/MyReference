@@ -39,7 +39,7 @@ def add(a,b):
 ## Debugging (pixie debugger)
 pixiedust is a debugging tool which provides IDE like debugging capability in a Jupyter notebook
 - Install
-```pip install```
+```pip install pixiedust```
 - Use
 ```
 import pixiedust
