@@ -1,4 +1,29 @@
+# Learning References
+- [https://www.tecmint.com/](https://www.tecmint.com/)
+- [https://www.cyberciti.biz](https://www.cyberciti.biz)
 # Add user
+- Create user with default setting
+```
+sudo useradd [username]
+```
+- Various setting & configurations can be provided. Reference [https://www.tecmint.com/add-users-in-linux/](https://www.tecmint.com/add-users-in-linux/)
+
+# Run shell script files
+-  Set execute permission on the file
+```
+chmod +x scriptname.sh
+```
+- Run the file
+```
+./scriptname.sh
+/path/to/scriptname.sh
+```
+
+# Check file & folder size
+```
+df -h
+du -sh [folder]
+```
 
 # Change root password
 
@@ -29,6 +54,10 @@ usermod -aG sudo username
 ```
 - Reference
 [https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart)
+
+
+# RSync
+- [https://www.cyberciti.biz/faq/use-rsync-to-backup-directory/](https://www.cyberciti.biz/faq/use-rsync-to-backup-directory/)
 
 # SCP
 
@@ -76,8 +105,3 @@ dpkg -l | grep postgres
 sudo apt-get --purge remove postgresql
 ```
 
-## Check file & folder size
-```
-df -h
-du -sh [folder]
-```
