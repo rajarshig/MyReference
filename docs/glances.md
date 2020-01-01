@@ -1,9 +1,9 @@
 # Glances - python based system monitoring tool. Can be used as standalone, Client/server, Web server
-Documentation 
+Documentation
 [https://glances.readthedocs.io](https://glances.readthedocs.io)
 
 ## Install
-- Ubuntu 
+- Ubuntu
 ```
 apt-get install glances
 ```
@@ -57,4 +57,3 @@ To change the refresh rate of the page, just add the period in seconds at the en
 ```
 http://@server:61208/10
 ```
-

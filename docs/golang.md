@@ -1,9 +1,9 @@
 ## Install
-- Reference 
+- Reference
 [https://golang.org/dl/](https://golang.org/dl/)
 [https://golang.org/doc/install](https://golang.org/doc/install)
 - Download binary file from [https://golang.org/dl/](https://golang.org/dl/)
-- Extract to /usr/local 
+- Extract to /usr/local
 ```
 tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 ```
@@ -37,5 +37,3 @@ go env
 
 
 ```
-
-

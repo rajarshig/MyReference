@@ -13,7 +13,7 @@ Default install location will be /home/[username]/miniconda3
 
 
 ## Create Environment
-- 
+-
 ```
 conda create -n myenv python
 ```

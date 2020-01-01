@@ -12,7 +12,7 @@ con_url = 'mysql://user:password@host/database?charset=utf8mb4'
 ```
 # Create connection
 ```
-DB_CONFIG = create_engine(con_url, pool_size=20, max_overflow=0)       
+DB_CONFIG = create_engine(con_url, pool_size=20, max_overflow=0)
 engine = DB_CONFIG
 connection = engine.connect()
 metadata = MetaData(engine, reflect=True)
@@ -61,7 +61,7 @@ first = interval_data.fetchone()
 - Select query with AND condition
 ```
 query = select([tablename]).where(and_(tablename.c.colname1 == [:value], tablename.c.colname2 == [:value]))
-    
+
 ```
 - Insert query
 ```
@@ -70,5 +70,5 @@ interval_result = connection.execute(interval_tracker.insert(), time_entry)
 ```
 - Update query
 ```
-trend_added = connection.execute(master_trends.update().where(master_trends.c.id == trend_id).values(category=new_trend_category, category_id=category_id))      
+trend_added = connection.execute(master_trends.update().where(master_trends.c.id == trend_id).values(category=new_trend_category, category_id=category_id))
 ```

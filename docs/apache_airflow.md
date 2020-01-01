@@ -34,7 +34,7 @@ cd ./tika-server/target/
 java -jar tika-server-1.8-SNAPSHOT.jar
 
 
-## 
+##
 [https://tika.apache.org/1.10/gettingstarted.html](https://tika.apache.org/1.10/gettingstarted.html)
 ## Tika REST Server docker image
 - [https://github.com/LogicalSpark/docker-tikaserver](https://github.com/LogicalSpark/docker-tikaserver)
@@ -46,7 +46,7 @@ sudo docker pull logicalspark/docker-tikaserver
 ```
 docker run -d -p 9998:9998 logicalspark/docker-tikaserver
 ```
-Should show like 
+Should show like
 ```
 CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS              PORTS                    NAMES
 7d969c8e356a        logicalspark/docker-tikaserver   "/bin/sh -c 'java -j…"   43 seconds ago      Up 39 seconds       0.0.0.0:9998->9998/tcp   kind_newton

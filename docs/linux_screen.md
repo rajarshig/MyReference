@@ -6,7 +6,7 @@
 screen -S [screen_view_name]
 ```
 - Entered into screen view. now run command
-eg. python script 
+eg. python script
 
 - Detach
 ```

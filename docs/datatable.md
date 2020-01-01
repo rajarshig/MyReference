@@ -1,7 +1,7 @@
 ## Custom processing image or style
 ```
-"language": 
-{          
+"language":
+{
 "processing": "<img style='width:50px; height:50px;' src='Content/images/loadingNew.gif' />",
 }
 ```

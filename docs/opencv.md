@@ -40,7 +40,7 @@ sudo apt install libgtk2.0-dev
 - [https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_colorspaces/py_colorspaces.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_colorspaces/py_colorspaces.html)
 - [https://www.geeksforgeeks.org/detection-specific-colorblue-using-opencv-python/](https://www.geeksforgeeks.org/detection-specific-colorblue-using-opencv-python/)
 - [https://www.pyimagesearch.com/2014/08/04/opencv-python-color-detection/](https://www.pyimagesearch.com/2014/08/04/opencv-python-color-detection/)
- 
+
 
 ## References
 - [https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html)

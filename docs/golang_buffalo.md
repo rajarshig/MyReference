@@ -7,9 +7,9 @@ $ sudo mv buffalo /usr/local/bin/buffalo
 ```
 
 ## Create new project
-- Refer to 
+- Refer to
 [https://gobuffalo.io/en/docs/getting-started/new-project](https://gobuffalo.io/en/docs/getting-started/new-project)
-- 
+-
 ```
 buffalo new [projectname]
 buffalo new [projectname] --api  # configure for api server

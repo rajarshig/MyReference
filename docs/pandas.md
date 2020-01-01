@@ -34,7 +34,7 @@ Max of Year column
 Min of both Month & Year combination
 ```
 >>> df.min()
->>> 
+>>>
 Year     2018.0
 Month       1.0
 dtype: float64
@@ -42,7 +42,7 @@ dtype: float64
 Max of both Month & Year combination
 ```
 >>> df.max()
->>> 
+>>>
 Year     2019.0
 Month      12.0
 dtype: float64
@@ -60,7 +60,7 @@ import os
 
 files = os.listdir('data')
 db_connection = "mysql://{}:{}@{}/{}?charset=utf8mb4".format('user','password','host','database')
-DB_CONFIG = create_engine(db_connection, pool_size=20, max_overflow=0)       
+DB_CONFIG = create_engine(db_connection, pool_size=20, max_overflow=0)
 engine = DB_CONFIG
 db_connection = engine.connect()
 
@@ -69,9 +69,9 @@ for filename in files:
         df = pd.read_csv('data/'+filename)
         try:
             table_name = filename.split('.csv')[0]
-            df.to_sql(table_name, con=engine, if_exists='append')   
+            df.to_sql(table_name, con=engine, if_exists='append')
         except Exception as e:
             pass
-        print("{} updated".format(filename)) 
+        print("{} updated".format(filename))
         # break
 ```

@@ -51,7 +51,7 @@ select Host,User,Password from mysql.user;
 SELECT TABLE_NAME, COLUMN_NAME, CONSTRAINT_NAME, REFERENCED_TABLE_NAME, REFERENCED_COLUMN_NAME FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE WHERE TABLE_SCHEMA = "database_name" AND TABLE_NAME = "table_name" AND REFERENCED_COLUMN_NAME IS NOT NULL;
 ```
 ## Temporarily disable Foreign Key check
-- Reference 
+- Reference
 [https://stackoverflow.com/questions/15501673/how-to-temporarily-disable-a-foreign-key-constraint-in-mysql](https://stackoverflow.com/questions/15501673/how-to-temporarily-disable-a-foreign-key-constraint-in-mysql)
 ```
 SET FOREIGN_KEY_CHECKS=0;

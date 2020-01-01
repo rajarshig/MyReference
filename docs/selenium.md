@@ -44,7 +44,7 @@ searchbox.send_keys(u'\ue007')
 news_tab = driver.find_element_by_link_text('News').click()
 res_list = driver.find_elements_by_class_name('lLrAF')
 for res in res_list:
-    
+
     single_res = {}
     single_res['link'] = res.get_attribute('href')
     single_res['text'] = res.text

@@ -22,7 +22,7 @@ tar -cvzf zipped_filename.tar.gz foldername/
 ## Unzip
 - Unzip a zip file
 ```
-$unzip myfile.zip 
+$unzip myfile.zip
 ```
 
 ### Reference:

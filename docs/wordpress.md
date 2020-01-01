@@ -8,7 +8,7 @@ server {
        # listen [::]:80 default_server ipv6only=on;
 
         root /var/www/site_folder;
-        
+
         index index.php index.html index.htm;
 
         error_log /var/log/nginx/error.log info;

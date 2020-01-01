@@ -1,7 +1,7 @@
 # Jupyter Cheatsheet
 
 ## Run notebook on remote server with SSH tunneling
-- 
+-
 ```
 ssh -L 8000:localhost:8888 username@your_server_ip
 source activate conda_env
@@ -24,7 +24,7 @@ python -m ipykernel install --user --name myenv --display-name "conda_base"
 jupyter notebook --no-browser
 ```
 ## Debugging (IPython debugger)
-- Import 
+- Import
 ```from IPython.core.debugger import set_trace```
 - Use
 ```
@@ -32,7 +32,7 @@ def add(a,b):
     '''
     Cell execution will stop here and open the command line for code inspection
     '''
-    set_trace()  
+    set_trace()
     return a + b
 ```
 
