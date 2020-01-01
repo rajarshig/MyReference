@@ -1,11 +1,11 @@
 # About
 ## Dockerfile
-The Dockerfile defines an application’s image content via one or more build commands that configure that image. Once built, you can run the image in a container. 
+The Dockerfile defines an application’s image content via one or more build commands that configure that image. Once built, you can run the image in a container.
 Reference:
 [https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/)
 
 ## Docker-Compose
-The docker-compose.yml file describes the services that make your app. In this example those services are a web server and database. The compose file also describes which Docker images these services use, how they link together, any volumes they might need mounted inside the containers. Finally, the docker-compose.yml file describes which ports these services expose. 
+The docker-compose.yml file describes the services that make your app. In this example those services are a web server and database. The compose file also describes which Docker images these services use, how they link together, any volumes they might need mounted inside the containers. Finally, the docker-compose.yml file describes which ports these services expose.
 
 
 # Install
@@ -38,7 +38,7 @@ sudo apt-key fingerprint 0EBFCD88
 ```
 
 - Use the following command to set up the stable repository.
-    
+
 ```
 sudo add-apt-repository \
 "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
@@ -66,7 +66,7 @@ Console output for successful install
 ```
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
-9db2ca6ccae0: Pull complete 
+9db2ca6ccae0: Pull complete
 Digest: sha256:4b8ff392a12ed9ea17784bd3c9a8b1fa3299cac44aca35a85c90c5e3c7afacdc
 Status: Downloaded newer image for hello-world:latest
 
@@ -90,7 +90,7 @@ https://hub.docker.com/
 
 For more examples and ideas, visit:
 https://docs.docker.com/engine/userguide/
- 
+
 ```
 ## Commands
 - View info
@@ -101,7 +101,7 @@ docker info
 ```
 docker container ls
 ```
-- Stop container 
+- Stop container
 [https://docs.docker.com/engine/reference/commandline/stop/](https://docs.docker.com/engine/reference/commandline/stop/)
 ```
 docker stop [container id]
@@ -129,7 +129,7 @@ docker version
 - View docker images with size
 ```
 docker images
-``` 
+```
 - Remove images
 ```
 docker rmi [image id]
@@ -140,11 +140,11 @@ docker rmi [image id]
 
 ## Pull docker images
 - sudo docker login
-- add your user to docker group 
+- add your user to docker group
 ```
 usermod -aG docker $USER
 ```
-- 
+-
 ```
 sudo docker pull logicalspark/docker-tikaserver
 ```
@@ -152,7 +152,7 @@ sudo docker pull logicalspark/docker-tikaserver
 ```
 docker run -d -p 9998:9998 logicalspark/docker-tikaserver
 ```
-- Check with 
+- Check with
 ```
 docker container ls --all
 ```
@@ -171,7 +171,7 @@ ENV PYTHONUNBUFFERED 1
 RUN apk update
 # for numpy etc related dependencies
 RUN apk add make automake gcc g++ subversion python3-dev
-# for postgres dependency 
+# for postgres dependency
 RUN apk add postgresql-dev gcc python3-dev musl-dev
 RUN pip install psycopg2
 RUN mkdir /code
@@ -198,7 +198,7 @@ run -p 8000:8000 --name apai_portal [imagename]
 ```
 $(aws ecr get-login --no-include-email --region us-west-2)
 ```
-- 
+-
 ```
 docker tag apai_portal:latest 032809623502.dkr.ecr.us-west-2.amazonaws.com/apai_portal:latest
 ```
@@ -206,6 +206,3 @@ docker tag apai_portal:latest 032809623502.dkr.ecr.us-west-2.amazonaws.com/apai_
 ```
 docker push 032809623502.dkr.ecr.us-west-2.amazonaws.com/apai_portal:latest
 ```
-
-
-

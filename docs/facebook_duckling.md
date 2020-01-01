@@ -57,7 +57,7 @@ curl -XPOST http://0.0.0.0:8000/parse --data 'locale=en_GB&text=tomorrow at eigh
 [https://github.com/facebook/duckling/blob/master/Duckling/Time/EN/Corpus.hs](https://github.com/facebook/duckling/blob/master/Duckling/Time/EN/Corpus.hs)
 
 ## Limit CPU usage by duckling server
--  Configure the Haskell runtime system using (to use 4 OS threads) 
+-  Configure the Haskell runtime system using (to use 4 OS threads)
 [https://github.com/facebook/duckling/issues/193](https://github.com/facebook/duckling/issues/193)
 ```
 stack exec -- duckling-example-exe +RTS -N4 -RTS

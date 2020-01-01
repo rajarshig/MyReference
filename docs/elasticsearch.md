@@ -1,5 +1,5 @@
 ## Install
-- 
+-
 Reference
 [https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-install.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-install.html)
 ```

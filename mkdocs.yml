@@ -13,7 +13,7 @@ pages:
       - Installation: python-installation.md
       - Virtual environment: python-virtual-environment.md
       - Editor: python-editor.md
-    
+
     - Database:
       - Mysql: mysql.md
       - Sqlalchemy: sqlalchemy.md
@@ -22,12 +22,12 @@ pages:
 
     - Data Engineering:
       - Hive: hive.md
-    
-    
+
+
     - Data analysis & processing:
       - Apache Tika: apache_tika.md
       - Pandas: pandas.md
-      - Anaconda: anaconda.md 
+      - Anaconda: anaconda.md
       - Facebook duckling: facebook_duckling.md
     - Linux:
       - Sox: sox.md

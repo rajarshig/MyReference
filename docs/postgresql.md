@@ -14,7 +14,7 @@ sudo apt-get install postgresql postgresql-contrib
 ```
 sudo -u postgres psql
 ```
- 
+
 ## Connect to a database
 ```
 psql -d bses_pdm
@@ -39,8 +39,8 @@ CREATE TABLE target_table AS table source_table;
 ```
 TABLE target_table AS table source_table with no data;
 ```
-## Backup 
-- 
+## Backup
+-
 ```
 /usr/bin/pg_dump --file "/home/user/db_name.bak" --host "xxx.xxx.xx.xx" --port "5432" --username ":username" ":dbname" -v
 ```
@@ -60,13 +60,13 @@ engine = create_engine('postgresql://scott:tiger@localhost:5432/mydatabase')
 
 - We create a unique index
 ```
-CREATE UNIQUE INDEX CONCURRENTLY candidate_skill_vector_candidate_detail_id 
+CREATE UNIQUE INDEX CONCURRENTLY candidate_skill_vector_candidate_detail_id
 ON candidate_skill_vector (candidate_detail_id);
 ```
 - We add a unique constraint to the equipment table using the equipment_equip_id index
 ```
-ALTER TABLE equipment 
-ADD CONSTRAINT unique_equip_id 
+ALTER TABLE equipment
+ADD CONSTRAINT unique_equip_id
 UNIQUE USING INDEX equipment_equip_id;
 ```
 - [http://www.postgresqltutorial.com/postgresql-unique-constraint/](http://www.postgresqltutorial.com/postgresql-unique-constraint/)
@@ -136,11 +136,11 @@ SELECT datname from pg_database;
 Reference: [https://stackoverflow.com/questions/5108876/kill-a-postgresql-session-connection](https://stackoverflow.com/questions/5108876/kill-a-postgresql-session-connection)
 ```
 SELECT * FROM pg_stat_activity;
-SELECT 
-pg_terminate_backend(pid) 
-FROM 
-pg_stat_activity 
-WHERE 
+SELECT
+pg_terminate_backend(pid)
+FROM
+pg_stat_activity
+WHERE
 -- don't kill my own connection!
 pid <> pg_backend_pid()
 -- don't kill the connections to other databases

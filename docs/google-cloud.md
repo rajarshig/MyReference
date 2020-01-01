@@ -22,10 +22,8 @@ out_raw = pd.read_gbq(query,project_id='internal-248613', dialect='standard')
 ```
 unset GOOGLE_APPLICATION_CREDENTIALS
 ```
-- Check default auth using 
+- Check default auth using
 ```
 gcloud auth application-default login
 ```
 You will be provided an url which can be used with the gmail account to authenticate. Afterwards that gmail account will be set as default auth of google cloud.
-
-

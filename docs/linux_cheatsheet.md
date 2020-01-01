@@ -83,7 +83,7 @@ nano ~/.bash_aliases
 ```
 alias gtst="git status"
 ```
-- Activate 
+- Activate
 ```
 source ~/.bash_aliases
 ```
@@ -104,4 +104,3 @@ dpkg -l | grep postgres
 ```
 sudo apt-get --purge remove postgresql
 ```
-

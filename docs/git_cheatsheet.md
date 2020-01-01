@@ -3,7 +3,7 @@
 
 
 ## Changing a remote's URL
-- Run in git repository 
+- Run in git repository
 ```
 git remote set-url [existing-remotename] [new-remote-url]
 git remote set-url origin git@github.com:USERNAME/REPOSITORY.git

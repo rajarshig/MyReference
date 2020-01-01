@@ -16,10 +16,9 @@ sudo apt-get install sox libsox-fmt-all
 play :filename
 
 File Size: 535k      Bit Rate: 256k
-  Encoding: MPEG audio    
-  Channels: 1 @ 16-bit   
-  Samplerate: 44100Hz      
-  Replaygain: off         
-  Duration: 00:00:16.72 
+  Encoding: MPEG audio
+  Channels: 1 @ 16-bit
+  Samplerate: 44100Hz
+  Replaygain: off
+  Duration: 00:00:16.72
 ```
-
