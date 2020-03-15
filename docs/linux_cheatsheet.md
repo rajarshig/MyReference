@@ -83,7 +83,7 @@ nano ~/.bash_aliases
 ```
 alias gtst="git status"
 ```
-- Activate
+- Activate 
 ```
 source ~/.bash_aliases
 ```
@@ -95,6 +95,29 @@ source ~/.bash_aliases
 eval `ssh-agent -s`
 ssh-add
 ```
+
+# Search processes in local network with port or host IP
+- Using `netstat` utility
+```
+netstat -anlp | grep '8015'
+```
+
+# Search in all processes with process name
+- Using grep
+```
+ps aux | grep [processname]
+```
+
+# Kill a process
+- By pid
+```
+sudo kill -9 [pid]
+```
+- By process name
+```
+sudo pkill -9 -f [processname] 
+# eg. sudo pkill -9 -f dbeaver
+```
 # Ubuntu
 ## View installed package with grep query
 ```
@@ -104,3 +127,4 @@ dpkg -l | grep postgres
 ```
 sudo apt-get --purge remove postgresql
 ```
+
