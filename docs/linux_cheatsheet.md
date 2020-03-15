@@ -118,6 +118,9 @@ sudo kill -9 [pid]
 sudo pkill -9 -f [processname] 
 # eg. sudo pkill -9 -f dbeaver
 ```
+- Other variations & reference
+[https://stackoverflow.com/questions/3510673/find-and-kill-a-process-in-one-line-using-bash-and-regex](https://stackoverflow.com/questions/3510673/find-and-kill-a-process-in-one-line-using-bash-and-regex)
+
 # Ubuntu
 ## View installed package with grep query
 ```
