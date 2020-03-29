@@ -1,3 +1,17 @@
+## Create a pandas dataframe directly from a s3 object
+Create a pandas dataframe directly from a s3 object, which is a csv file (without downloading the file & reading from it)
+```
+import pandas as pd
+import io
+
+s3_obj = s3_client.get_object(Bucket=bucket, Key=filename)
+s3_obj_df = pd.read_csv(io.BytesIO(s3_obj['Body'].read()), encoding='utf8')
+```
+As pd.read_csv() allows a file like object, here we created a file like object from the s3 binary file. which is similar to
+```
+f = open("data.csv", "rb")
+```
+
 ## Pandera - A flexible & expressive pandas validation library
 - [https://pandera.readthedocs.io/en/latest/index.html](https://pandera.readthedocs.io/en/latest/index.html)
 - [https://www.pyopensci.org/blog/pandera-python-pandas-dataframe-validation](https://www.pyopensci.org/blog/pandera-python-pandas-dataframe-validation)
@@ -7,48 +21,6 @@
 - [https://www.dataquest.io/blog/pandas-concatenation-tutorial/](https://www.dataquest.io/blog/pandas-concatenation-tutorial/)
 
 
-## Quick way to get Min & Max of columns
--
-```
->>> df
-```
-```
->>>
-Year      Month
-2019.0    12.0
-2019.0    11.0
-....
-2018.0    2.0
-2018.0    1.0
-```
-Min of Month column
-```
->>> df['Month'].min()
->>> Out[]: 1.0
-```
-Max of Year column
-```
->>> df['Year'].max()
->>> Out[]: 2019.0
-```
-Min of both Month & Year combination
-```
->>> df.min()
->>>
-Year     2018.0
-Month       1.0
-dtype: float64
-```
-Max of both Month & Year combination
-```
->>> df.max()
->>>
-Year     2019.0
-Month      12.0
-dtype: float64
-```
-- Reference
-[https://stackoverflow.com/questions/12169170/find-the-max-of-two-or-more-columns-with-pandas](https://stackoverflow.com/questions/12169170/find-the-max-of-two-or-more-columns-with-pandas)
 
 
 ## CSV to Mysql table
