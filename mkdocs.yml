@@ -2,6 +2,8 @@ site_name: My Reference
 pages:
     - Home: index.md
     - General Reference: general.md
+    - Learning:
+      - learning-tableau.md
     - CheatSheets:
       - VS Code: vscode_cheatsheet.md
       - Linux: linux_cheatsheet.md
