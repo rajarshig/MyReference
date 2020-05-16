@@ -1,5 +1,5 @@
 site_name: My Reference
-pages:
+nav:
     - Home: index.md
     - General Reference: general.md
     - Learning:
@@ -11,6 +11,8 @@ pages:
       - Git: git_cheatsheet.md
       - Ubuntu: ubuntu_cheatsheet.md
       - Django: django-cheatsheet.md
+    - Git:
+      - Github SSH setup: github_ssh_setup.md
     - Golang:
       - General: golang.md
       - Buffalo: golang_buffalo.md
@@ -21,7 +23,9 @@ pages:
       - Pytest: pytest.md
       - Logging: python-logging.md
       - General: python.md
-     
+    - Cloud:
+      - AWS: aws-s3.md     
+      - Google Cloud: google-cloud.md
     - Database:
       - Mysql: mysql.md
       - Sqlalchemy: sqlalchemy.md
@@ -31,13 +35,18 @@ pages:
     - Data Engineering:
       - Hive: hive.md
       - Apache Airflow: apache_airflow.md
-
+    - Business Intelligence:
+      - ELK: elk.md
     - Data analysis & processing:
+      - Tensorflow: tensorflow.md
+      - Text Analysis: text_analytics.md
       - Opencv: opencv.md
       - Apache Tika: apache_tika.md
       - Pandas: pandas.md
       - Anaconda: anaconda.md
       - Facebook duckling: facebook_duckling.md
+    - Automation:
+      - Selenium: selenium.md
     - Linux OS & Tools:
       - Sox: sox.md
       - Screen: linux_screen.md
@@ -48,7 +57,8 @@ pages:
       - Exiftool: exiftool.md
       - Makefile: makefile.md
       - Supervisor: supervisor.md
-
+    - Frontend:
+      - Datatable: datatable.md
     - Markdown: markdown.md
     - Docker: docker.md
     - Nginx: nginx.md
