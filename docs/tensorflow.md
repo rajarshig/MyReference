@@ -31,7 +31,7 @@ Air Cognizer: Predicting Air Quality with TensorFlow Lite
 ## Video presentations
 - [https://www.youtube.com/watch?v=b5Rs1ToD9aI](TensorFlow Dev Summit 2019 Keynote)
 - [https://www.youtube.com/watch?v=F_uuqfgdZZw](Basics of TensorFlow - TF Workshop - Session 1)
-- [https://www.youtube.com/watch?v=k5c-vg4rjBw](Introducing TensorFlow 2.0 and its high-level APIs (TF Dev Summit '19))
+- [https://www.youtube.com/watch?v=k5c-vg4rjBw]("Introducing TensorFlow 2.0")
 
 ## Tensorflow Learn
 - [https://www.tensorflow.org/learn](https://www.tensorflow.org/learn)

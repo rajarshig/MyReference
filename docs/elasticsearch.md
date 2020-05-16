@@ -3,9 +3,9 @@
 Reference
 [https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-install.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-install.html)
 ```
-curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.6.2.tar.gz
-tar -xvf elasticsearch-6.6.2.tar.gz
-cd elasticsearch-6.6.2/bin
+curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.2-linux-x86_64.tar.gz
+tar -xvf elasticsearch-7.6.2-linux-x86_64.tar.gz
+cd elasticsearch-7.6.2/bin
 ./elasticsearch
 ```
 

@@ -16,3 +16,6 @@
 
         Describes or categorizes data, tells you what/when/who, slices the quantitative data 
 - **Dimensions & Measures are the building blocks of Tableau charts**
+
+## Common chart types
+Visual analytics leverages our pre‑attentive attributes, which are the visual cues humans automatically process with sensory memory. We can notice and interpret these kinds of attributes quickly and without special effort.

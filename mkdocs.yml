@@ -9,33 +9,45 @@ pages:
       - Linux: linux_cheatsheet.md
       - Jupyter: jupyter_cheatsheet.md
       - Git: git_cheatsheet.md
-      - Python: python_cheatsheet.md
       - Ubuntu: ubuntu_cheatsheet.md
+      - Django: django-cheatsheet.md
+    - Golang:
+      - General: golang.md
+      - Buffalo: golang_buffalo.md
     - Python:
       - Installation: python-installation.md
       - Virtual environment: python-virtual-environment.md
       - Editor: python-editor.md
-
+      - Pytest: pytest.md
+      - Logging: python-logging.md
+      - General: python.md
+     
     - Database:
       - Mysql: mysql.md
       - Sqlalchemy: sqlalchemy.md
       - Postgresql: postgresql.md
       - Elasticsearch: elasticsearch.md
-
+      - Mongodb: mongodb.md
     - Data Engineering:
       - Hive: hive.md
-
+      - Apache Airflow: apache_airflow.md
 
     - Data analysis & processing:
+      - Opencv: opencv.md
       - Apache Tika: apache_tika.md
       - Pandas: pandas.md
       - Anaconda: anaconda.md
       - Facebook duckling: facebook_duckling.md
-    - Linux:
+    - Linux OS & Tools:
       - Sox: sox.md
       - Screen: linux_screen.md
       - Tree: linux_tree.md
       - Zip: linux_zip.md
+      - Ubuntu: ubuntu.md
+      - Glances: glances.md
+      - Exiftool: exiftool.md
+      - Makefile: makefile.md
+      - Supervisor: supervisor.md
 
     - Markdown: markdown.md
     - Docker: docker.md
