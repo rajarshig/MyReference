@@ -37,9 +37,11 @@ FLUSH PRIVILEGES;
 - In /etc/mysql/mysql.conf.d/mysqld.cnf, comment out the line with 'bind-address'
 - Restart mysql
 
-## Mysqldump
+## Export with Mysqldump
 ```
 mysqldump --single-transaction -u username -p dbname tablename --where "updated_at < '2018-07-01 00:00:00'">backup_filename.sql
+
+mysqldump -u username -p dbname --single-transaction --quick --lock-tables=false > dbname-$(date +\%F-\%T).sql
 ```
 
 ## Check all database users

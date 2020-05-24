@@ -79,6 +79,14 @@ filename varchar(500) not null,
 item_list jsonb not null,
 created_at timestamp with time zone default(now() at time zone 'UTC')
 ```
+
+## Change column type
+```
+alter table tablename alter column "job_detail" type jsonb using "job_detail"::JSON;
+alter table tablename alter column "job_detail" type text using "job_detail"::text;
+
+```
+
 ## Create FOREIGN Key constraint
 ```
 
@@ -107,6 +115,10 @@ COMMIT;
 
 
 ## Command prompt
+-
+```
+psql dbname username
+```
 - Get to Postgres prompt with user postgres
 ```
 sudo -u postgres psql
@@ -150,4 +162,14 @@ AND datname = 'database_name'
 Before executing this query, you have to REVOKE the CONNECT privileges to avoid new connections:
 ```
 REVOKE CONNECT ON DATABASE dbname FROM PUBLIC, username;
+```
+
+##
+- Get size of a database
+```
+SELECT pg_size_pretty( pg_database_size('dbname') );
+```
+- Get size of a table
+```
+SELECT pg_size_pretty( pg_total_relation_size('tablename') );
 ```
