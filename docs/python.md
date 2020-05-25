@@ -1,6 +1,18 @@
 ## IO
 The python [IO](https://docs.python.org/3/library/io.html) module provides numerous way to handle text, binary & raw data.
 
+
+## Datetime with timezone
+```
+IST_TZ = pytz.timezone('Asia/Kolkata')
+ist_dt = datetime.datetime.now(datetime.timezone.utc).astimezone(IST_TZ)
+```
+
+## Convert datetime to UNIX timestamp
+```
+int(time.mktime(ist_dt.timetuple()))
+```
+
 ## Get filename & extension
 ```
 name, ext = os.path.splitext('file.txt')

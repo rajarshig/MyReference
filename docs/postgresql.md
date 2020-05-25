@@ -112,6 +112,15 @@ CREATE INDEX "jobs_client_id_d72bc1fd" ON "jobs" ("client_id");
 CREATE INDEX "jobs_email_id_81a0d42b" ON "jobs" ("email_id");
 COMMIT;
 ```
+## View data folder at /main/base by database name
+```
+select oid, datname from pg_catalog.pg_database order by oid
+```
+
+## View data folder at /main/base by table name
+```
+select relname, relfilenode from pg_catalog.pg_class where relname ='tablename'
+```
 
 
 ## Command prompt
