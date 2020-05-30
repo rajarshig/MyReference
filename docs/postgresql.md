@@ -132,6 +132,35 @@ psql dbname username
 ```
 sudo -u postgres psql
 ```
+- View help from psql command
+```
+\?
+```
+- Run OS commands from psql prompt
+```
+\! ls
+```
+- Vertical row view of query output (like /G in Mysql)
+```
+\x  -- this will toggle(on/off) expanded display
+
+-[ RECORD 1 ]------------------------------------
+id         | b3e15401-dcda-4661-9437-ea746d032661
+created_at | 2010-05-02 06:21:33.548336+05:30
+updated_at | 2010-05-08 23:50:09.898722+05:30
+-[ RECORD 2 ]------------------------------------
+id         | 077df787-0047-4e82-8c00-cb196a636347
+created_at | 2010-05-02 06:21:33.406059+05:30
+updated_at | 2010-05-08 23:50:21.92295+05:30
+
+```
+- Write multiline query
+```
+filex=# SELECT *
+filex-# FROM files
+filex-# LIMIT 10;
+```
+
 - List databases
 ```
 \l
@@ -145,6 +174,10 @@ SELECT datname from pg_database;
 ```
 \conninfo
 ```
+- Connect to a remote Postgres instance
+```
+psql -h pg_remote_host -U user_name-ddatabase_name
+```
 - View all tables (this command shows all tables, as well as tables named like 'tbl_id_seq' that is of type sequence. This is a representation of serial type in the table(s), which have them. This keep track of the next number in the sequence and is created automatically for columns of this type.)
 ```
 \t
@@ -152,6 +185,17 @@ SELECT datname from pg_database;
 - View all tables (without sequence types)
 ```
 \dt
+- View a table structure
+```
+\d [tablename]  // :q to quit view
+```
+- View a table structure with more detail
+```
+\d+ [tablename]  // :q to quit view
+```
+- View all tables with size
+```
+\dt+
 ```
 - Kill a query process
 Reference: [https://stackoverflow.com/questions/5108876/kill-a-postgresql-session-connection](https://stackoverflow.com/questions/5108876/kill-a-postgresql-session-connection)
