@@ -160,7 +160,10 @@ filex=# SELECT *
 filex-# FROM files
 filex-# LIMIT 10;
 ```
-
+- Bulk insert with output of sub query
+```
+INSERT INTO test1(file_id) select id from table2 limit 100000;
+```
 - List databases
 ```
 \l
